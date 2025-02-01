@@ -2,7 +2,7 @@
 
 function sum(a,b, callback){
     let added = a+b;
-    callback(added);
+    callback(added); //fixed a bug here
 }
 
 function displayActive(displayingText){

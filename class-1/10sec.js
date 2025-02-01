@@ -1,4 +1,4 @@
-// this code is for a countdown timer that will be count down from 30 seconds
+// this code is for a countdown timer that will be count down from 10 seconds
 
 setTimeout(timer,10000)
 
