@@ -1,15 +1,16 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 // middleware
 
 app.use(bodyParser.json())
 
-app.post('/', (req,res) => {
-    console.log(req.body);
+app.get('/back', (req,res) => {
+    console.log(2+2);
     res.send("Hello World")
+    //console.log(req.params.id)
 })
 
 app.get("/route-handler" , function(req,res){
