@@ -1,9 +1,10 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
 
 app.get("/route-handler" , function(req,res){
-    
+    console.log(req.headers)
     res.json({
         "firstName" : "Abhimanyu" ,
         "lastName" : "Singh" ,
