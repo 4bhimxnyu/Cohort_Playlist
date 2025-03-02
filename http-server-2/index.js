@@ -3,10 +3,14 @@ const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
 
+// middleware
+
+app.use(bodyParser.json())
+
 app.get("/route-handler" , function(req,res){
-    console.log(req.headers)
+    console.log(req.body);
     res.json({
-        "firstName" : "Abhimanyu" ,
+        "firstName" : "Abhimanyu" ,s
         "lastName" : "Singh" ,
         "age" : 18
     })
