@@ -7,18 +7,20 @@ const port = 3000
 
 app.use(bodyParser.json())
 
-app.get("/route-handler" , function(req,res){
+app.post('/', (req,res) => {
     console.log(req.body);
+    res.send("Hello World")
+})
+
+app.get("/route-handler" , function(req,res){
     res.json({
-        "firstName" : "Abhimanyu" ,s
+        "firstName" : "Abhimanyu" ,
         "lastName" : "Singh" ,
         "age" : 18
     })
 })
 
-app.get("/" , function(req,res){
-    res.send("Hello World")
-})
+
 
 app.get("/about" , function(req,res){
     res.json({
