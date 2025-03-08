@@ -17,6 +17,7 @@ app.get('/',function(req,res){
     const n = req.query.n;
     const sum = calculateSum(n);
     res.send(sum.toString());
+    // the sum should be sent as a string and not a number as number causes confusion , as server thinks it is a status code
 })
 
 app.listen(port, function(){
