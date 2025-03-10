@@ -5,27 +5,27 @@ var users = [{
     name : "Abhimanyu" , 
     Kidneys : [{
         healthy:false
-    }, {
-        healthy:true
     }]
 }];
 
+
 app.get("/" , function(req,res){
     const abhiKidneys = users[0].Kidneys;
-    res.send(abhiKidneys)
+    const numberOfKidneys = abhiKidneys.length;
+    let numberOfHealthyKidneys = 0;
+    
+    for(let i = 0 ; i < numberOfKidneys ; i++ )
+    {
+        if (abhiKidneys[i].healthy)
+        {
+            numberOfHealthyKidney = numberOfHealthyKidneys + 1 ;
+        }
+    }
+    const numberOfUnhealthyKidneys = numberOfKidneys - numberOfHealthyKidneys;
+    res.json({ abhiKidneys ,
+    numberOfKidneys ,
+    numberOfHealthyKidneys , numberOfUnhealthyKidneys});
 })
 
-app.put("/" , function(req,res){
-
-})
-
-
-app.post("/" , function(req,res){
-
-})
-
-app.delete("/" , function(req,res){
-
-})
 
 app.listen(3000)
