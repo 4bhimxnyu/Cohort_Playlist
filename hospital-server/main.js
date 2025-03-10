@@ -18,7 +18,7 @@ app.get("/" , function(req,res){
     {
         if (abhiKidneys[i].healthy)
         {
-            numberOfHealthyKidney = numberOfHealthyKidneys + 1 ;
+            numberOfHealthyKidneys = numberOfHealthyKidneys + 1 ;
         }
     }
     const numberOfUnhealthyKidneys = numberOfKidneys - numberOfHealthyKidneys;
@@ -27,5 +27,16 @@ app.get("/" , function(req,res){
     numberOfHealthyKidneys , numberOfUnhealthyKidneys});
 })
 
+app.use(express.json());
 
-app.listen(3000)
+app.post("/" , function (req,res){
+    const isHealthy = req.body.isHealthy;
+    users[0].Kidneys.push({
+        healthy : isHealthy
+    })
+    res.json({
+        msg: "Done!"
+    })
+})
+
+app.listen(3000);
