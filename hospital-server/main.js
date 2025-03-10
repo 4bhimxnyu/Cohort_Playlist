@@ -25,8 +25,10 @@ app.get("/" , function(req,res){
     res.json({ abhiKidneys ,
     numberOfKidneys ,
     numberOfHealthyKidneys , numberOfUnhealthyKidneys});
+    console.log(users)
 })
 
+// used to get the post function running.
 app.use(express.json());
 
 app.post("/" , function (req,res){
@@ -37,6 +39,13 @@ app.post("/" , function (req,res){
     res.json({
         msg: "Done!"
     })
+})
+
+app.put("/", function(req,res){
+   for(let i = 0 ; i<users[0].Kidneys.length ; i++){
+        users[0].Kidneys[i].healthy = true ;
+   } 
+   res.json({});
 })
 
 app.listen(3000);
