@@ -31,6 +31,9 @@ app.get("/" , function(req,res){
 // used to get the post function running.
 app.use(express.json());
 
+
+// pushes new information to the https request
+
 app.post("/" , function (req,res){
     const isHealthy = req.body.isHealthy;
     users[0].Kidneys.push({
@@ -41,6 +44,7 @@ app.post("/" , function (req,res){
     })
 })
 
+// put all the value to 0 or any other pre-defined stage
 app.put("/", function(req,res){
    for(let i = 0 ; i<users[0].Kidneys.length ; i++){
         users[0].Kidneys[i].healthy = true ;
@@ -48,6 +52,7 @@ app.put("/", function(req,res){
    res.json({});
 })
 
+// deletes the data from the https request 
 app.delete("/",function(req,res){
     const newKidney = [];
     for(let i = 0;i <users[0].Kidneys.length ; i++){
