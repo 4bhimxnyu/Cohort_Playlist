@@ -54,18 +54,38 @@ app.put("/", function(req,res){
 
 // deletes the data from the https request 
 app.delete("/",function(req,res){
-    const newKidney = [];
+
+    if(isThereAtleastOneUnhealthyKidney()){
+        const newKidney = [];
+        for(let i = 0;i <users[0].Kidneys.length ; i++){
+            if(users[0].Kidneys[i].healthy){
+                newKidney.push({
+                    healthy:true
+                })
+            }
+        }
+        users[0].Kidneys = newKidney ;
+        res.json({
+            msg: "Done!"
+        })
+    }
+    else{
+        res.status(411).json({
+            msg: "you have no bad kidneys"
+        })
+    }
+    
+    
+})
+
+function isThereAtleastOneUnhealthyKidney(){
+    let atleastOneUnhealthyKidney = false ;
     for(let i = 0;i <users[0].Kidneys.length ; i++){
-        if(users[0].Kidneys[i].healthy){
-            newKidney.push({
-                healthy:true
-            })
+        if(!users[0].Kidneys[i].healthy){
+            atleastOneUnhealthyKidney = true ;
         }
     }
-    users[0].Kidneys = newKidney ;
-    res.json({
-        msg: "Done!"
-    })
-})
+    return atleastOneUnhealthyKidney;
+}
 
 app.listen(3000);
