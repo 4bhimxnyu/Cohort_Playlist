@@ -1,0 +1,5 @@
+{
+    "title": "Ali goes to school",
+    "genre": "Fiction",
+    "type": "Children book"
+}
