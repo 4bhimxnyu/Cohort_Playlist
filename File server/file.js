@@ -11,9 +11,7 @@ app.get("/files/:fileName", function(req,res){
             data
         })
     });
-
     console.log(name);
-    res.json({})
 })
 
 app.listen(3000)
