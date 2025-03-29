@@ -1,0 +1,1 @@
+this is everything you needed to know about javascript
