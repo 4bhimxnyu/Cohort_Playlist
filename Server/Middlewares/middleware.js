@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+app.use(express.json())
+
 function userMiddleware(req,res,next){
     if(username!="Abhimanyu"|| password !="1234"){
         res.status(403).json({
@@ -35,4 +37,4 @@ app.get("/heartCheck", userMiddleware, function(req,res){
     res.send("your heart is healthy")
 })
 
-app.listen(4001);
+app.listen(4000);
