@@ -12,10 +12,9 @@ function calculateRequests(req,res,next){
 app.use(calculateRequests);
 
 app.get("/number", function(req,res){
-    
     res.json({
         msg : "calculating"
-    })
+    });
 });
 
 app.listen(3000);

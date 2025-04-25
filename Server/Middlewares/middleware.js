@@ -1,7 +1,10 @@
+// there are errors in this code
+
+
 const express = require('express');
 const app = express();
 
-app.use(express.json())
+
 
 function userMiddleware(req,res,next){
     if(username!="Abhimanyu"|| password !="1234"){
