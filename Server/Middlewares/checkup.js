@@ -16,7 +16,7 @@ app.get('/checkup', (req, res) => {
 
     if(KidneyId!=1 && KidneyId!=2){
         res.status(411).json({
-            message : "KidneyId is not found"
+            message : "KidneyId is invalid"
             });
         return;
     }
