@@ -24,4 +24,4 @@ app.get('/checkup', (req, res) => {
     res.send("your body is healthy");
 })
 
-app.listen(port);
+app.listen(port);return
