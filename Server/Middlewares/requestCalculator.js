@@ -13,9 +13,11 @@ app.use(calculateRequests);
 
 app.get("/number", function(req,res){
     res.json({
-        msg : "calculating"
+        msg : "calculating",
+        requests : numberOfrequests
     });
-    res.send("Number of requests made to this server is " + numberOfrequests);
+    console.log("number of requests is " + numberOfrequests);
+
 });
 
 app.listen(3000);
