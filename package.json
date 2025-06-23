@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/4bhimxnyu/Cohort_Playlist#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "zod": "^3.25.67"
   }
 }
