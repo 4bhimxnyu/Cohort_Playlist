@@ -12,9 +12,7 @@ function userMiddleware(req,res,next){
             message: "Invalid username or password"
         });
     }
-    else{
-        next();
-    }
+    next()
 }
 
 function kidneyMiddleware(res,req,next){

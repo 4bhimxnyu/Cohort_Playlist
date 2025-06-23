@@ -9,7 +9,7 @@ function calculateRequests(req,res,next){
     next();
 }
 
-app.use(calculateRequests);
+app.use(calculateRequests); // this is a middleware function that will be called for every request, you don't need to call it explicitly(everywhere in different routes/functions)
 
 app.get("/number", function(req,res){
     res.json({
