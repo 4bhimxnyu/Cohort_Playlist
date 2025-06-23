@@ -10,9 +10,14 @@ app.get("/", function(req, res, next){
 
 app.post("/kidneyId",function(req, res, next){
     const kidney = req.query.kidney;
-    
+    if(kidney){
+        res.send({
+            message: `The number of the kidney is ${kidney}`,
+        });
+        return;
+    }
     res.send({
-        message: `The number of the kidney is ${kidney}`,
+        message: "No kidney number provided",
     });
 });
 
