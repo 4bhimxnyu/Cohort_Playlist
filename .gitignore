@@ -1,6 +1,8 @@
 # Ignore keys folder
 keys/
 
+
+
 # Ignore all .env files
 .env
 
@@ -18,4 +20,3 @@ node_modules/
 # Ignore logs
 logs/
 *.log
-keys/
