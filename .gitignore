@@ -18,3 +18,4 @@ node_modules/
 # Ignore logs
 logs/
 *.log
+keys/
