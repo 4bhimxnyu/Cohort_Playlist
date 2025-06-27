@@ -17,6 +17,7 @@ app.post("/check",function(req, res){
             message: "Invalid input, please provide an array of numbers",
             error: result.error.errors
         })
+
     }}
 
     else{
@@ -27,4 +28,10 @@ app.post("/check",function(req, res){
     
 })
 
-app.listen(4000)
+// this is the kidney server which will check if the input is an array of numbers or not
+// if it is an array of numbers, it will return the number of the kidney
+// if it is not an array of numbers, it will return an error message
+// this is a simple example of how zod can be used to validate the input and make the code more readable and maintainable
+app.listen(4000,()=>{
+    console.log("Kidney Server is running on port 4000");
+})
