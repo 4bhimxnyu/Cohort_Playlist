@@ -1,3 +1,8 @@
+// Description: This is a simple kidney server that uses Zod for input validation.
+// It checks if the input is an array of numbers and returns the number of the kidney.
+// If the input is not valid, it returns an error message.
+
+
 const express = require('express');
 const zod = require('zod');
 const app = express();
