@@ -12,6 +12,7 @@ app.get("/", (req, res) => {
     res.send("Welcome to the JWT Authentication Server");
 });
 
+// this is the database
 const ALL_USERS = [
     {
         name : "abhimanyu",
@@ -60,7 +61,7 @@ app.post('/login',(req,res)=>{
         token,
     })
 })
-
+//
 app.get("/protected",function(req, res) {
     const token = req.headers.authorization;
     try{
