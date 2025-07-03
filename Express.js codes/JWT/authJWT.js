@@ -47,8 +47,7 @@ function userExists  (username, password) {
 
 
 app.post('/login',(req,res)=>{
-    const username = req.body.username;
-    const password = req.body.password;
+    const {username,password}=req.body;
     if(!(userExists(username,password))){
         return res.status(403).json({
             msg :"user is not found in the database"
