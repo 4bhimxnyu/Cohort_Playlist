@@ -14,4 +14,6 @@ const sum = (a,b) =>{
 }
 
 const ans = sum(3,4);
+const secondans = product(5,7);
+console.log(secondans);
 console.log(ans);
