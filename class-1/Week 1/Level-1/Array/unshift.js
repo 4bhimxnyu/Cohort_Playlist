@@ -2,8 +2,9 @@
 
 function unshiftOperation(arr, val) {
     console.log(`this is the original array: ${JSON.stringify(arr)}`);
-    let modified = arr.unshift(arr,val);
-    console.log(`this is the modified array: ${JSON.stringify(modified)}`);
+    arr.unshift(val);
+    console.log(`this is the modified array: ${JSON.stringify(arr)}`);
+    return arr;
 }
 
 let studentsRank = ["abhi" , "john" , "doe" , "javascript"];
