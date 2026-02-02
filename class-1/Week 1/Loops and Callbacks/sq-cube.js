@@ -12,5 +12,7 @@ function addSumCube(value1 , value2 , cb){
     return val1+ val2;
 } 
 
-let answer = addSumCube(2,3,sqaure)
-console.log(answer);
+let sq_answer = addSumCube(2,3,sqaure)
+let cube_answer = addSumCube(3,2,cube)
+console.log(sq_answer);
+console.log(cube_answer);

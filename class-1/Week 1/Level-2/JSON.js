@@ -1,3 +1,8 @@
+// difference between stringify and parse 
+// parse converts strings to object, whereas stringify converts object to string
+// parse is opposite of stringify
+
+
 const user1 = {
     name:"abhi",
     age:"18",
