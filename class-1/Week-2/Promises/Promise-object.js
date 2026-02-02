@@ -8,7 +8,8 @@ let Promise1 = new Promise(function(resolve, reject){
         // resolve is working
 
         resolve("done after a second");
-        console.log("reject is neglected as resolve is resolving the promise already")
+        // OKAY SO I'LL TELL YOU THIS ABOVE CODE IS NOT GONNA EXECUTE AS THE PROMISE IS NOT RESOLVED YET. 
+        console.log("reject is neglected as resolve is resolving the promise already") 
         reject("rejected after a second");
         }, 1000);
 })

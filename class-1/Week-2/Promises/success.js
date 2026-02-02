@@ -1,5 +1,6 @@
 // this has got bugs and errors which needs to be resolved
 
+
 let cohort = false ;
 let learning =  false ;
 
@@ -14,7 +15,7 @@ function learningCurve(){
         else if(learning){
             resolve({
                 name : "learning" , 
-                message : "learning is never stopping"
+                message : "learning should never stop."
             })
         }
         else{
@@ -41,5 +42,11 @@ learningCurve().then(function(msg){
 learningCurve().then(function(msg){
     console.log("the resolved promise is " + msg.name );
 }).catch(function(msg){
-    console.log(`the rejected promise is ${msg.name}`);
+    console.log(`the rejected promise is ${msg.name , msg.message} `);
 })
+
+learningCurve().then(function(msg){
+    console.log(`the resolve was accepted ${msg.message}`)
+}).catch(function(msg){
+    console.log(`the promise was rejected ${msg.name}` + msg.message);
+});

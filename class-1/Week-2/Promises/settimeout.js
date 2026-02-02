@@ -9,7 +9,14 @@ function setTimoutActivate(duration){
     return p;
 }
  
-const ans = setTimoutActivate(1000)
+const ans = setTimoutActivate(1000);
 ans.then(function(){
     console.log("the timeout has been activated");
-})
+});
+
+
+let text = "timeout for a sec becs palakshi is gay";
+
+let result = setTimeout(() => {
+    console.log(text);
+}, 2000);

@@ -1,3 +1,5 @@
+//this new Date() loads the current date in a variable
+
 const currentDate = new Date();
 
 console.log(`the date is: ${currentDate.getDate()}`);

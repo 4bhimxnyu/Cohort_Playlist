@@ -1,0 +1,1 @@
+this is the source of text which will be extracted by the file manager system and will be executed.
