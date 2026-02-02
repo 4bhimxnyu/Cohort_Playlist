@@ -15,3 +15,4 @@ function displayPassive(displayingText){
 
 
 let wantedResult = sum(5,10,displayPassive);
+let newResult = sum(2,4,displayActive);
