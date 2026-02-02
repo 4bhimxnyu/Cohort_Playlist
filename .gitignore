@@ -1,7 +1,7 @@
 # Ignore keys folder
 keys/
 
-
+.palakshi
 
 # Ignore all .env files
 .env
