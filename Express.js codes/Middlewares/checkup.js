@@ -24,4 +24,6 @@ app.get('/checkup', (req, res) => {
     res.send("your body is healthy");
 })
 
-app.listen(port);return
+app.listen(port,()=>{
+    console.log(`server is active on http://localhost:${port}`);
+});
