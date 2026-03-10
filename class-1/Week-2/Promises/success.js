@@ -48,5 +48,5 @@ learningCurve().then(function(msg){
 learningCurve().then(function(msg){
     console.log(`the resolve was accepted ${msg.message}`)
 }).catch(function(msg){
-    console.log(`the promise was rejected ${msg.name}` + msg.message);
+    console.log(`the promise was rejected  ${ msg.name}` + msg.message);
 });
